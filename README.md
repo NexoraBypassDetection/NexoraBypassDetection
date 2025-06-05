@@ -40,7 +40,7 @@
 </head>
 <body>
   <h1>Need assistance?</h1>
-  <h2>Join Our Discord Server Below!</h1>
+  <h2>Join Our Discord Server Below!</h2>
   <button onclick="window.location.href='https://discord.gg/YOUR_INVITE_CODE'">
     Help
   </button>
