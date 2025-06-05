@@ -36,7 +36,7 @@
       overflow: hidden;
     }
 
-    .container::before {
+    .border-glow {
       content: "";
       position: absolute;
       inset: 0;
@@ -45,28 +45,22 @@
       background: linear-gradient(120deg, transparent 0%, #3b82f6 50%, transparent 100%);
       background-size: 300% 300%;
       z-index: 0;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      animation: glowSweep 1s linear forwards;
       pointer-events: none;
+      opacity: 0;
+      transition: opacity 1s ease;
     }
 
-    .container:hover::before {
+    .container.glow .border-glow {
       opacity: 1;
-      animation: glowSweep 1s linear forwards;
+      animation: glowSweep 1s linear infinite;
     }
 
     @keyframes glowSweep {
       0% {
         background-position: 0% 50%;
-        opacity: 0;
-      }
-      30% {
-        opacity: 1;
       }
       100% {
         background-position: 200% 50%;
-        opacity: 1;
       }
     }
 
@@ -151,7 +145,8 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="glow-container">
+    <div class="border-glow"></div>
     <h1>DO NOT TRY TO BYPASS THE KEY SYSTEM!</h1>
     <h2>Need assistance?</h2>
     <p>Join our verified Discord support server below</p>
@@ -166,5 +161,21 @@
       class="logo"
     />
   </div>
+
+  <script>
+    const container = document.getElementById('glow-container');
+    let glowTimeout;
+
+    container.addEventListener('mouseenter', () => {
+      clearTimeout(glowTimeout);
+      container.classList.add('glow');
+    });
+
+    container.addEventListener('mouseleave', () => {
+      glowTimeout = setTimeout(() => {
+        container.classList.remove('glow');
+      }, 1000); // fade-out duration
+    });
+  </script>
 </body>
 </html>
