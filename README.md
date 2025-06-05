@@ -5,90 +5,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Need Help?</title>
   <style>
-    body {
-      margin: 0;
-      padding: 40px 20px;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(145deg, #0a0f2c, #1e2a50);
-      color: #f0f0f0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
+    /* Base styling */
+    * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: 20px;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f172a, #1e293b);
+      color: #e2e8f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
       padding: 30px;
-      max-width: 420px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      padding: 40px 30px;
+      max-width: 480px;
       width: 100%;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(12px);
       text-align: center;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+      transform: scale(1.01);
     }
 
     h1 {
-      color: #ff4e4e;
-      font-size: 2rem;
-      margin-bottom: 20px;
-      text-shadow: 0 0 6px rgba(255, 0, 0, 0.4);
+      font-size: 1.8rem;
+      color: #ef4444;
+      margin-bottom: 16px;
+      text-shadow: 0 0 8px rgba(255, 0, 0, 0.3);
     }
 
     h2 {
-      font-size: 1.5rem;
-      margin-bottom: 0;
+      font-size: 1.4rem;
+      color: #60a5fa;
+      margin-bottom: 6px;
     }
 
     p {
       font-size: 1rem;
-      color: #bbb;
-      margin-top: 5px;
-      margin-bottom: 20px;
+      color: #94a3b8;
+      margin-bottom: 24px;
     }
 
     button {
-      background: #7289da;
-      border: none;
+      background: linear-gradient(to right, #3b82f6, #60a5fa);
       color: white;
+      border: none;
       padding: 14px 28px;
       font-size: 1rem;
-      border-radius: 10px;
+      border-radius: 16px;
       cursor: pointer;
-      transition: 0.3s ease;
-      box-shadow: 0 4px 12px rgba(114, 137, 218, 0.4);
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 18px rgba(96, 165, 250, 0.5);
     }
 
     button:hover {
-      background: #5b6eae;
-      box-shadow: 0 4px 18px rgba(114, 137, 218, 0.6);
+      background: linear-gradient(to right, #60a5fa, #3b82f6);
+      box-shadow: 0 6px 24px rgba(96, 165, 250, 0.7);
+      transform: translateY(-2px);
     }
 
     iframe {
-      margin-top: 30px;
-      border-radius: 15px;
-      border: none;
+      margin-top: 32px;
       width: 100%;
       height: 500px;
+      border-radius: 16px;
+      border: none;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      iframe {
+        height: 400px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="card">
+  <div class="container">
     <h1>DO NOT TRY TO BYPASS THE KEY SYSTEM!</h1>
     <h2>Need assistance?</h2>
-    <p>Join Our Discord Server Below!</p>
+    <p>Join our verified Discord support server below</p>
 
     <button onclick="window.location.href='https://discord.gg/YOUR_INVITE_CODE'">
-      Help
+      Join Support Server
     </button>
 
     <iframe
       src="https://discord.com/widget?id=1378394208427049071&theme=dark"
       allowtransparency="true"
-      frameborder="0"
       sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
     </iframe>
   </div>
