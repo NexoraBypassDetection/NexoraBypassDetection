@@ -90,7 +90,9 @@
       max-width: 360px;
       height: auto;
       border-radius: 16px;
-      box-shadow: 0 6px 28px rgba(0, 0, 0, 0.3);
+      box-shadow:
+        0 10px 30px rgba(30, 58, 138, 0.5),  /* navy blue soft glow */
+        0 6px 16px rgba(0, 0, 0, 0.25);      /* subtle black base */
       transition: transform 0.3s ease;
     }
 
