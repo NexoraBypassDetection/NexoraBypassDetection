@@ -11,10 +11,11 @@
       font-family: 'Segoe UI', sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
-      height: 100vh;
       margin: 0;
+      padding: 20px;
+      min-height: 100vh;
     }
 
     h1 {
@@ -37,7 +38,7 @@
       padding: 12px 24px;
       font-size: 1rem;
       color: white;
-      background: #5865F2; /* Discord color */
+      background: #5865F2;
       border: none;
       border-radius: 8px;
       cursor: pointer;
@@ -64,7 +65,6 @@
     Help
   </button>
 
-  <!-- ✅ Discord Server Widget -->
   <iframe
     src="https://discord.com/widget?id=1378394208427049071&theme=dark"
     width="350"
