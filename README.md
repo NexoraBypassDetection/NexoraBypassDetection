@@ -39,9 +39,9 @@
     .container:hover {
       transform: scale(1.01);
       box-shadow:
-        0 0 0 3px #3b82f6,
-        0 0 12px 4px rgba(96, 165, 250, 0.6),
-        0 8px 40px rgba(0, 0, 0, 0.4);
+        0 0 0 4px #3b82f6,
+        0 0 18px 6px rgba(96, 165, 250, 0.8),
+        0 10px 60px rgba(0, 0, 0, 0.6);
     }
 
     h1 {
@@ -72,12 +72,15 @@
       border-radius: 16px;
       cursor: pointer;
       transition: all 0.25s ease;
-      box-shadow: 0 4px 18px rgba(96, 165, 250, 0.5);
+      box-shadow: 0 6px 24px rgba(96, 165, 250, 0.6);
     }
 
     button:hover {
       background: linear-gradient(to right, #60a5fa, #3b82f6);
-      box-shadow: 0 6px 24px rgba(96, 165, 250, 0.7);
+      box-shadow:
+        0 0 0 3px #3b82f6,
+        0 0 22px 6px rgba(96, 165, 250, 0.9),
+        0 8px 40px rgba(0, 0, 0, 0.5);
       transform: translateY(-2px);
     }
 
@@ -87,16 +90,16 @@
       max-width: 360px;
       height: auto;
       border-radius: 16px;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 6px 28px rgba(0, 0, 0, 0.3);
       transition: all 0.3s ease;
     }
 
     .logo:hover {
       box-shadow:
-        0 0 0 3px #3b82f6,
-        0 0 12px 4px rgba(96, 165, 250, 0.6),
-        0 6px 20px rgba(0, 0, 0, 0.3);
-      transform: scale(1.02);
+        0 0 0 4px #3b82f6,
+        0 0 20px 8px rgba(96, 165, 250, 0.9),
+        0 10px 50px rgba(0, 0, 0, 0.5);
+      transform: scale(1.025);
     }
 
     @media (max-width: 500px) {
