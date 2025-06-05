@@ -36,40 +36,38 @@
       overflow: hidden;
     }
 
-    .border-glow {
+    .corner-effect::before {
       content: "";
       position: absolute;
       inset: 0;
       border-radius: 24px;
-      padding: 2px;
-      background: linear-gradient(120deg, transparent 0%, #3b82f6 50%, transparent 100%);
-      background-size: 300% 300%;
-      z-index: 0;
+      border: 3px solid transparent;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.6), rgba(96, 165, 250, 0.3)) border-box;
+      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
       pointer-events: none;
       opacity: 0;
       transition: opacity 1s ease;
+      animation: cornerGlow 1s linear infinite;
+      z-index: 0;
     }
 
-    .container.glow .border-glow {
+    .container.corner-active::before {
       opacity: 1;
-      animation: glowSweep 1s linear infinite;
     }
 
-    @keyframes glowSweep {
+    @keyframes cornerGlow {
       0% {
-        background-position: 0% 50%;
+        box-shadow:
+          0 0 0px rgba(96, 165, 250, 0.2),
+          0 0 6px rgba(96, 165, 250, 0.3);
       }
       100% {
-        background-position: 200% 50%;
+        box-shadow:
+          0 0 15px rgba(96, 165, 250, 0.7),
+          0 0 30px rgba(96, 165, 250, 0.4);
       }
-    }
-
-    .container:hover {
-      transform: scale(1.01);
-      box-shadow:
-        0 0 0 3px #3b82f6,
-        0 0 20px 6px rgba(96, 165, 250, 0.8),
-        0 12px 60px rgba(0, 0, 0, 0.55);
     }
 
     h1 {
@@ -81,20 +79,21 @@
       z-index: 1;
     }
 
+    h2, p, button {
+      position: relative;
+      z-index: 1;
+    }
+
     h2 {
       font-size: 1.4rem;
       color: #60a5fa;
       margin-bottom: 6px;
-      position: relative;
-      z-index: 1;
     }
 
     p {
       font-size: 1rem;
       color: #94a3b8;
       margin-bottom: 24px;
-      position: relative;
-      z-index: 1;
     }
 
     button {
@@ -107,8 +106,6 @@
       cursor: pointer;
       transition: all 0.25s ease;
       box-shadow: 0 6px 24px rgba(96, 165, 250, 0.6);
-      position: relative;
-      z-index: 1;
     }
 
     button:hover {
@@ -145,8 +142,7 @@
   </style>
 </head>
 <body>
-  <div class="container" id="glow-container">
-    <div class="border-glow"></div>
+  <div class="container corner-effect" id="cornerBox">
     <h1>DO NOT TRY TO BYPASS THE KEY SYSTEM!</h1>
     <h2>Need assistance?</h2>
     <p>Join our verified Discord support server below</p>
@@ -163,18 +159,18 @@
   </div>
 
   <script>
-    const container = document.getElementById('glow-container');
-    let glowTimeout;
+    const box = document.getElementById("cornerBox");
+    let fadeTimeout;
 
-    container.addEventListener('mouseenter', () => {
-      clearTimeout(glowTimeout);
-      container.classList.add('glow');
+    box.addEventListener("mouseenter", () => {
+      clearTimeout(fadeTimeout);
+      box.classList.add("corner-active");
     });
 
-    container.addEventListener('mouseleave', () => {
-      glowTimeout = setTimeout(() => {
-        container.classList.remove('glow');
-      }, 1000); // fade-out duration
+    box.addEventListener("mouseleave", () => {
+      fadeTimeout = setTimeout(() => {
+        box.classList.remove("corner-active");
+      }, 1000); // 1 second fade-out
     });
   </script>
 </body>
