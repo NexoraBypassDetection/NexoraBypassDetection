@@ -88,6 +88,15 @@
       height: auto;
       border-radius: 16px;
       box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .logo:hover {
+      box-shadow:
+        0 0 0 3px #3b82f6,
+        0 0 12px 4px rgba(96, 165, 250, 0.6),
+        0 6px 20px rgba(0, 0, 0, 0.3);
+      transform: scale(1.02);
     }
 
     @media (max-width: 500px) {
@@ -111,7 +120,6 @@
       Join Support Server
     </button>
 
-    <!-- ✅ Use <img> instead of iframe for images -->
     <img
       src="https://cdn.discordapp.com/attachments/1220824376123850752/1380312327806521415/NEXORA_SCRIPTS.png?ex=68436b87&is=68421a07&hm=75511ffd508259721d6878428d9e02059d0e3a937b29747089e999d58be8d8e4&"
       alt="NEXORA SCRIPTS Logo"
