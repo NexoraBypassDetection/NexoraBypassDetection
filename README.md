@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Need help? Click the button to join our support Discord server. DO NOT TRY TO BYPASS KEY SYSTEM!" />
   <title>Need Help?</title>
   <style>
     body {
@@ -16,7 +15,6 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      text-align: center;
     }
 
     h1 {
@@ -24,7 +22,7 @@
       margin-bottom: 10px;
     }
 
-    p {
+    .description {
       font-size: 1rem;
       color: #ff4d4d;
       margin-bottom: 20px;
@@ -48,7 +46,7 @@
 </head>
 <body>
   <h1>Need assistance?</h1>
-  <p><strong>DO NOT TRY TO BYPASS KEY SYSTEM!</strong></p>
+  <div class="description">DO NOT TRY TO BYPASS KEY SYSTEM!</div>
   <button onclick="window.location.href='https://discord.gg/YOUR_INVITE_CODE'">
     Help
   </button>
