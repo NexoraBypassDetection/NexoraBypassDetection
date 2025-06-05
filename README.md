@@ -19,6 +19,17 @@
 
     h1 {
       font-size: 2.5rem;
+      color: red;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-top: 0;
       margin-bottom: 20px;
     }
 
@@ -31,22 +42,36 @@
       border-radius: 8px;
       cursor: pointer;
       transition: background 0.2s ease;
+      margin-bottom: 20px;
     }
 
     button:hover {
       background: #4752c4;
     }
+
+    iframe {
+      border-radius: 8px;
+      border: none;
+    }
   </style>
 </head>
 <body>
-  <h1 style="font-size: 2rem; color: red;">DO NOT TRY TO BYPASS THE KEY SYSTEM!</h1>
+  <h1>DO NOT TRY TO BYPASS THE KEY SYSTEM!</h1>
   <h2>Need assistance?</h2>
-  <p style="font-size: 1rem; margin-top: -10px;">Join Our Discord Server Below!</p>
-
-
+  <p>Join Our Discord Server Below!</p>
 
   <button onclick="window.location.href='https://discord.gg/YOUR_INVITE_CODE'">
     Help
   </button>
+
+  <!-- ✅ Discord Server Widget -->
+  <iframe
+    src="https://discord.com/widget?id=1378394208427049071&theme=dark"
+    width="350"
+    height="500"
+    allowtransparency="true"
+    frameborder="0"
+    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+  </iframe>
 </body>
 </html>
