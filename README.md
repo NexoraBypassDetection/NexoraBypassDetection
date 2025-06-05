@@ -40,8 +40,9 @@
 </head>
 <body>
   <h1 style="font-size: 2rem; color: red;">DO NOT TRY TO BYPASS THE KEY SYSTEM!</h1>
-  <h2 class="tight-header">Need assistance?</h2>
-  <h2 class="tight-subheader">Join Our Discord Server Below!</h2>
+  <h2>Need assistance?</h2>
+  <p style="font-size: 1rem; margin-top: -10px;">Join Our Discord Server Below!</p>
+
 
 
   <button onclick="window.location.href='https://discord.gg/YOUR_INVITE_CODE'">
