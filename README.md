@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Need Help?</title>
   <style>
-    /* Base styling */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -33,11 +32,16 @@
       text-align: center;
       backdrop-filter: blur(15px);
       box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease;
+      transition: 0.3s ease;
+      position: relative;
     }
 
     .container:hover {
       transform: scale(1.01);
+      box-shadow:
+        0 0 0 3px #3b82f6,
+        0 0 12px 4px rgba(96, 165, 250, 0.6),
+        0 8px 40px rgba(0, 0, 0, 0.4);
     }
 
     h1 {
