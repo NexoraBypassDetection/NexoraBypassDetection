@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -19,12 +19,6 @@
 
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    .description {
-      font-size: 1rem;
-      color: #ff4d4d;
       margin-bottom: 20px;
     }
 
@@ -46,7 +40,7 @@
 </head>
 <body>
   <h1>Need assistance?</h1>
-  <div class="description">DO NOT TRY TO BYPASS KEY SYSTEM!</div>
+  <h2>Need assistance?</h1>
   <button onclick="window.location.href='https://discord.gg/YOUR_INVITE_CODE'">
     Help
   </button>
