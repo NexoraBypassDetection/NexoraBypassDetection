@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+DO NOT TRY TO BYPASS KEY SYSTEM!
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
