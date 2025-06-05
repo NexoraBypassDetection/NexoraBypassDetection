@@ -138,7 +138,7 @@
     <h2>Need assistance?</h2>
     <p>Join our verified Discord support server below</p>
 
-    <button onclick="window.location.href='https://discord.gg/YOUR_INVITE_CODE'">
+    <button onclick="window.location.href='https://discord.gg/FepZCVDN'">
       Join Support Server
     </button>
 
