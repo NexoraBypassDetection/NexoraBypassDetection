@@ -1,8 +1,9 @@
-DO NOT TRY TO BYPASS KEY SYSTEM!
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Need help? Click the button to join our support Discord server. DO NOT TRY TO BYPASS KEY SYSTEM!" />
   <title>Need Help?</title>
   <style>
     body {
@@ -15,10 +16,17 @@ DO NOT TRY TO BYPASS KEY SYSTEM!
       align-items: center;
       height: 100vh;
       margin: 0;
+      text-align: center;
     }
 
     h1 {
       font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #ff4d4d;
       margin-bottom: 20px;
     }
 
@@ -40,6 +48,7 @@ DO NOT TRY TO BYPASS KEY SYSTEM!
 </head>
 <body>
   <h1>Need assistance?</h1>
+  <p><strong>DO NOT TRY TO BYPASS KEY SYSTEM!</strong></p>
   <button onclick="window.location.href='https://discord.gg/YOUR_INVITE_CODE'">
     Help
   </button>
