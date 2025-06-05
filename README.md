@@ -112,7 +112,7 @@
     </button>
 
     <iframe
-      src="https://discord.com/widget?id=1378394208427049071&theme=dark"
+      src="https://cdn.discordapp.com/attachments/1220824376123850752/1380312327806521415/NEXORA_SCRIPTS.png?ex=68436b87&is=68421a07&hm=75511ffd508259721d6878428d9e02059d0e3a937b29747089e999d58be8d8e4&"
       allowtransparency="true"
       sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
     </iframe>
