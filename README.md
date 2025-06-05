@@ -5,12 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Need Help?</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #0f172a, #1e293b);
@@ -31,42 +25,37 @@
       width: 100%;
       text-align: center;
       backdrop-filter: blur(15px);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
       overflow: hidden;
     }
 
-    .corner-effect::before {
+    .corner-overlay {
+      pointer-events: none;
       content: "";
       position: absolute;
       inset: 0;
       border-radius: 24px;
-      border: 3px solid transparent;
-      background: linear-gradient(135deg, rgba(59, 130, 246, 0.6), rgba(96, 165, 250, 0.3)) border-box;
-      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: destination-out;
-      mask-composite: exclude;
-      pointer-events: none;
+      border: 2px solid rgba(96, 165, 250, 0.5);
+      box-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
       opacity: 0;
       transition: opacity 1s ease;
-      animation: cornerGlow 1s linear infinite;
       z-index: 0;
     }
 
-    .container.corner-active::before {
+    .corner-active .corner-overlay {
       opacity: 1;
+      animation: cornerPulse 2s ease-in-out infinite;
     }
 
-    @keyframes cornerGlow {
+    @keyframes cornerPulse {
       0% {
-        box-shadow:
-          0 0 0px rgba(96, 165, 250, 0.2),
-          0 0 6px rgba(96, 165, 250, 0.3);
+        box-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(96, 165, 250, 0.6);
       }
       100% {
-        box-shadow:
-          0 0 15px rgba(96, 165, 250, 0.7),
-          0 0 30px rgba(96, 165, 250, 0.4);
+        box-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
       }
     }
 
@@ -142,7 +131,9 @@
   </style>
 </head>
 <body>
-  <div class="container corner-effect" id="cornerBox">
+  <div class="container" id="cornerBox">
+    <div class="corner-overlay"></div>
+
     <h1>DO NOT TRY TO BYPASS THE KEY SYSTEM!</h1>
     <h2>Need assistance?</h2>
     <p>Join our verified Discord support server below</p>
@@ -170,7 +161,7 @@
     box.addEventListener("mouseleave", () => {
       fadeTimeout = setTimeout(() => {
         box.classList.remove("corner-active");
-      }, 1000); // 1 second fade-out
+      }, 1000); // 1s fade out
     });
   </script>
 </body>
