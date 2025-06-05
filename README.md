@@ -81,12 +81,12 @@
       transform: translateY(-2px);
     }
 
-    iframe {
+    .logo {
       margin-top: 32px;
       width: 100%;
-      height: 500px;
+      max-width: 360px;
+      height: auto;
       border-radius: 16px;
-      border: none;
       box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
     }
 
@@ -95,8 +95,8 @@
         padding: 30px 20px;
       }
 
-      iframe {
-        height: 400px;
+      .logo {
+        max-width: 100%;
       }
     }
   </style>
@@ -111,11 +111,12 @@
       Join Support Server
     </button>
 
-    <iframe
+    <!-- ✅ Use <img> instead of iframe for images -->
+    <img
       src="https://cdn.discordapp.com/attachments/1220824376123850752/1380312327806521415/NEXORA_SCRIPTS.png?ex=68436b87&is=68421a07&hm=75511ffd508259721d6878428d9e02059d0e3a937b29747089e999d58be8d8e4&"
-      allowtransparency="true"
-      sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
-    </iframe>
+      alt="NEXORA SCRIPTS Logo"
+      class="logo"
+    />
   </div>
 </body>
 </html>
